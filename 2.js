@@ -113,7 +113,11 @@ function quantity_goods() {
         totalAmount = totalAmount + prod.amount
         totalSumm = totalSumm + prod.amount * prod.good["price"];
         }
-    console.log("Общее количество товаров в корзине: " + totalAmount + " Общая стоимость товаров в корзине: " + totalSumm);
+    let result = {
+        totalAmount: totalAmount,
+        totalSumm: totalSumm,
+    }
+    return result
     }
 
 add_goods("Пальто", 1);
@@ -131,6 +135,6 @@ add_goods("Брюки", 1);
 add_goods("Брюки", 1);
 add_goods("Штаны", 5);
 console.log(card);
-quantity_goods()
+console.log(quantity_goods())
 
 // console.log(card[0].good["name"]);
