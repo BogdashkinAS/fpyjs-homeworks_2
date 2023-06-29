@@ -15,8 +15,12 @@ function num(count) {
   return true;
 }
 
-while (numbers.length < number) {
-  count += 1;
-  num(count);
+function num_array() {
+  while (numbers.length < number) {
+    count += 1;
+    num(count);
+  }
+  return numbers
 }
-console.log(numbers);
+
+console.log(num_array());
